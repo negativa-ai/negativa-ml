@@ -1,3 +1,3 @@
 # negativa-ml
 
-Coming soon
+Scheduled Date: 1st Oct. 2025
