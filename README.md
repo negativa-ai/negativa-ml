@@ -1,3 +1,3 @@
 # negativa-ml
 
-Scheduled Date: 1st Oct. 2025
+Scheduled Date: 6th Oct. 2025
