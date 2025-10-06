@@ -1,0 +1,17 @@
+name: Tests
+run-name: ${{ github.actor }} is running GitHub Actions
+on: [push]
+jobs:
+  unit-tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+      - name: Install dependencies
+        run: |
+          apt update && apt install libspdlog-dev cmake
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      - name: Run Unit Tests
+        run: |
+          make cpu-only-test
